@@ -2,7 +2,7 @@
 
 ## About
 
-Extension of [PathSim](https://dl.acm.org/doi/abs/10.14778/3402707.3402736) to incorporate (spatial) proximity to allow inexact matches based.
+Spatial extension of [PathSim](https://dl.acm.org/doi/abs/10.14778/3402707.3402736) for co-location similarity search in heterogeneous information networks, relaxing exact matches at spatial intermediate nodes through proximity relations while preserving PathSim's round-trip semantics.
 
 
 ## Setting Up for Local Development
@@ -60,6 +60,8 @@ Follow the steps below to set up and run the project on your local machine:
     ```bash
     ~/.../spatially-constrained-pathsim$ ./build/tests/EdgeDecompositionUnweightedValidationTest
     ```
+
+
 
 ## Experiments
 
@@ -146,6 +148,7 @@ Run the unweighted Foursquare H3 Grid query-runtime tracking for resolution `9`,
 ```bash
 ~/.../spatially-constrained-pathsim$ ./build/Experiments/TrackRuntimes/Foursquare/trackPathSimQueryGridResolution9Epsilon1000Unweighted ./Datasets 10 10
 ```
+
 
 
 ## Format of Datasets
