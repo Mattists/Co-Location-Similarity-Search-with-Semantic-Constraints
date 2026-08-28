@@ -1,0 +1,5 @@
+add_subdirectory(Analysis)
+add_subdirectory(ApproximationQuality)
+add_subdirectory(ComputeMaxDistance)
+add_subdirectory(ExperimentalAnalysis)
+add_subdirectory(TrackRuntimes)

@@ -1,0 +1,14 @@
+/.vscode
+/.idea
+/build
+/benchmarks
+/Datasets/**/matrices/
+/Datasets/**/*.dat
+/vcpkg
+/data
+/.vs
+/eigen-3.4-rc1/eigen-3.4-rc1
+/out/build/x64-Debug (Standard)
+/CMakeSettings.json
+/cmake-build-debug
+slurm/err/*
