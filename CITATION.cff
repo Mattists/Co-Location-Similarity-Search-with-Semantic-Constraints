@@ -1,0 +1,75 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite the accompanying paper specified under preferred-citation."
+title: "Co-Location Similarity Search with Semantic Constraints"
+type: software
+
+authors:
+  - given-names: Mattis
+    family-names: "thor Straten"
+    affiliation: "Kiel University"
+    email: "mts@cs.uni-kiel.de"
+    orcid: "https://orcid.org/0009-0005-1140-3352"
+
+  - given-names: Christian
+    family-names: Beth
+    affiliation: "Kiel University"
+    email: "cbe@cs.uni-kiel.de"
+    orcid: "https://orcid.org/0000-0003-3313-0752"
+
+  - given-names: Yannick
+    family-names: "Wölker"
+    affiliation: "Hamburg University of Technology"
+    email: "yannick.woelker@tuhh.de"
+    orcid: "https://orcid.org/0009-0006-6076-8996"
+
+  - given-names: Matthias
+    family-names: Renz
+    affiliation: "Kiel University"
+    email: "mr@cs.uni-kiel.de"
+    orcid: "https://orcid.org/0000-0002-2024-7700"
+
+abstract: >-
+  Research software accompanying the paper "Co-Location Similarity Search
+  with Semantic Constraints". It extends PathSim for co-location similarity
+  search in spatial heterogeneous information networks by relaxing exact
+  matches at spatial intermediate nodes while preserving PathSim's round-trip
+  semantics. The implementation includes an exact edge-decomposition
+  realization and a scalable H3 grid-based connectivity approximation, together with
+  weighted variants and experimental evaluation code.
+
+keywords:
+  - "heterogeneous information network"
+  - "meta path"
+  - "similarity search"
+  - "spatial data"
+  - "PathSim"
+  - "co-location"
+  - "H3"
+
+repository-code: "https://github.com/Mattists/Co-Location-Similarity-Search-with-Semantic-Constraints"
+
+preferred-citation:
+  type: conference-paper
+  title: "Co-Location Similarity Search with Semantic Constraints"
+
+  authors:
+    - given-names: Mattis
+      family-names: "thor Straten"
+
+    - given-names: Christian
+      family-names: Beth
+
+    - given-names: Yannick
+      family-names: "Wölker"
+
+    - given-names: Matthias
+      family-names: Renz
+
+  conference:
+    name: "GeoSearch '26"
+    date-start: "2026-11-03"
+    date-end: "2026-11-03"
+
+  year: 2026
+  month: 11
+  status: submitted
