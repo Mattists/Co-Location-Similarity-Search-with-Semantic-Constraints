@@ -38,12 +38,13 @@ abstract: >-
   weighted variants and experimental evaluation code.
 
 keywords:
-  - "heterogeneous information network"
-  - "meta path"
-  - "similarity search"
-  - "spatial data"
-  - "PathSim"
   - "co-location"
+  - "spatial proximity"
+  - "semantic similarity"
+  - "similarity search"
+  - "heterogeneous network"
+  - "meta path"
+  - "PathSim"
   - "H3"
 
 repository-code: "https://github.com/Mattists/Co-Location-Similarity-Search-with-Semantic-Constraints"
