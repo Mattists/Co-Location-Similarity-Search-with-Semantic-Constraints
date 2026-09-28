@@ -14,7 +14,6 @@ set(YFCC_EPSILON_VALUES
         10000
         20000
         50000
-        75000
 )
 
 set(YFCC_WEIGHTED_SUFFIXES
@@ -22,14 +21,21 @@ set(YFCC_WEIGHTED_SUFFIXES
         Weighted
 )
 
+set(YFCC_APPROX_SUFFIXES
+        UnderApprox
+        OverApprox
+)
+
 set(YFCC_PATHSIM_QUERY_TARGETS)
 
 foreach(grid_resolution ${YFCC_GRID_RESOLUTIONS})
     foreach(epsilon ${YFCC_EPSILON_VALUES})
         foreach(weighted_suffix ${YFCC_WEIGHTED_SUFFIXES})
-            list(APPEND YFCC_PATHSIM_QUERY_TARGETS
-                    trackPathSimQueryGridResolution${grid_resolution}Epsilon${epsilon}${weighted_suffix}
-            )
+            foreach(approx_suffix ${YFCC_APPROX_SUFFIXES})
+                list(APPEND YFCC_PATHSIM_QUERY_TARGETS
+                        trackPathSimQueryGridResolution${grid_resolution}Epsilon${epsilon}${weighted_suffix}${approx_suffix}
+                )
+            endforeach()
         endforeach()
     endforeach()
 endforeach()
@@ -54,12 +60,18 @@ foreach(target ${YFCC_PATHSIM_QUERY_TARGETS})
 endforeach()
 
 set(YFCC_SPATIALMETAPATH_TARGETS
-        trackRuntimesEpsilonSizeGridRes5Unweighted
-        trackRuntimesEpsilonSizeGridRes5Weighted
-        trackRuntimesEpsilonSizeGridRes7Unweighted
-        trackRuntimesEpsilonSizeGridRes7Weighted
-        trackRuntimesEpsilonSizeGridRes9Unweighted
-        trackRuntimesEpsilonSizeGridRes9Weighted
+        trackRuntimesEpsilonSizeGridRes5UnweightedOverApprox
+        trackRuntimesEpsilonSizeGridRes5UnweightedUnderApprox
+        trackRuntimesEpsilonSizeGridRes5WeightedOverApprox
+        trackRuntimesEpsilonSizeGridRes5WeightedUnderApprox
+        trackRuntimesEpsilonSizeGridRes7UnweightedOverApprox
+        trackRuntimesEpsilonSizeGridRes7UnweightedUnderApprox
+        trackRuntimesEpsilonSizeGridRes7WeightedOverApprox
+        trackRuntimesEpsilonSizeGridRes7WeightedUnderApprox
+        trackRuntimesEpsilonSizeGridRes9UnweightedOverApprox
+        trackRuntimesEpsilonSizeGridRes9UnweightedUnderApprox
+        trackRuntimesEpsilonSizeGridRes9WeightedOverApprox
+        trackRuntimesEpsilonSizeGridRes9WeightedUnderApprox
         trackRuntimesEpsilonSizeEdgeDecompositionUnweighted
         trackRuntimesEpsilonSizeEdgeDecompositionWeighted
 )

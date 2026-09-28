@@ -22,9 +22,9 @@ int main(int argc, char *argv[]) {
     fs::path allDatasetPath = argv[1];
     CreateRTreeIfMissing(allDatasetPath.string(), "YFCC", "photosWGS84.csv", ',');
 
-    vector<int> epsilonSizes = {100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 75000};
+    vector<int> epsilonSizes = {100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000};
     constexpr int warmupRuns = 1;
-    constexpr int measuredRuns = 10;
+    constexpr int measuredRuns = 5;
 
     for (int epsilonSize : epsilonSizes) {
         vector<long long> runtimes;

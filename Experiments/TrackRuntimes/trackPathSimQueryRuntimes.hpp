@@ -30,7 +30,7 @@ namespace fs = std::filesystem;
 
 constexpr char delimiter = ',';
 constexpr int defaultK = 10;
-constexpr int defaultMeasuredRuns = 10;
+constexpr int defaultMeasuredRuns = 5;
 constexpr int warmupRuns = 1;
 constexpr int noGridResolution = 0;
 constexpr std::size_t sampleSize = 1000;
@@ -45,6 +45,7 @@ struct TrackingConfig {
     std::string matrixName;
     std::string spatialAttributeName;
     std::string attributeFileName;
+    int reportedEpsilon = 0;
 
     bool usesGrid() const {
         return gridResolution != noGridResolution;
@@ -54,6 +55,10 @@ struct TrackingConfig {
         return approach == "edgeDecomposition";
     }
 };
+
+inline int outputEpsilon(const TrackingConfig& config) {
+    return config.reportedEpsilon > 0 ? config.reportedEpsilon : config.epsilon;
+}
 
 template <typename T>
 using QueryMatrix = Eigen::SparseMatrix<T, Eigen::RowMajor>;
@@ -150,7 +155,7 @@ inline void writeResultRow(std::ostream& output,
                            const double stddevNs) {
     output << config.approach << ";"
            << (config.weighted ? "true" : "false") << ";"
-           << config.epsilon << ";"
+           << outputEpsilon(config) << ";"
            << config.gridResolution << ";"
            << conference << ";"
            << k << ";"
