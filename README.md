@@ -4,6 +4,8 @@
 
 Spatial extension of [PathSim](https://dl.acm.org/doi/abs/10.14778/3402707.3402736) for co-location similarity search in heterogeneous information networks, relaxing exact matches at spatial intermediate nodes through proximity relations while preserving PathSim's round-trip semantics.
 
+DOI of the related paper: [10.1145/3849732.38573279](https://doi.org/10.1145/3849732.3857327)
+
 
 ## Setting Up for Local Development
 
@@ -17,7 +19,7 @@ Follow the steps below to set up and run the project on your local machine:
      Install the [Eigen](https://robots.uc3m.es/installation-guides/install-eigen.html) C++ library.
      Depending on your operating system, the installation process might vary.
      This is the process on Ubuntu:
-   
+
       ```bash
       sudo apt install libeigen3-dev
       ```
@@ -26,7 +28,7 @@ Follow the steps below to set up and run the project on your local machine:
     CMake is a cross-platform build system.
     Depending on your operating system, the installation process might vary:
     This is the process on Ubuntu:
-   
+
     ```bash
     sudo apt install cmake
     ```
